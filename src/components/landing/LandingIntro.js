@@ -13,11 +13,15 @@ const Wrapper = styled.div`
   width: 100vw;
   display: flex;
   align-items: center;
+
+  @media (max-width: 750px) {
+    flex-flow: column;
+  }
 `;
 
 const ImgContainer = styled.div`
   height: 100%;
-  flex: 1;
+  flex: 3;
 `;
 
 const Image = styled.img`
@@ -27,6 +31,19 @@ const Image = styled.img`
 const ShopContainer = styled.div`
   flex: 1;
   padding: 50px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+
+  @media (max-width: 750px) {
+    margin-top: -8rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 `;
 
 const Intro = styled.p`
@@ -45,6 +62,10 @@ const Button = styled.button`
   font-family: "Gideon Roman", cursive;
   border-color: transparent;
   cursor: pointer;
+
+  @media (max-width: 750px) {
+    margin-top: -20px;
+  }
 `;
 
 function LandingIntro() {

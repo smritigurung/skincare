@@ -6,6 +6,8 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   margin-top: 10px;
+  min-width: 280px;
+  height: 350px;
 `;
 
 const Wrapper = styled.div`
@@ -25,7 +27,11 @@ const ImgContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 80%;
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
+  object-position: center;
+  margin-left: 5%;
 `;
 
 const ShopContainer = styled.div`
@@ -38,7 +44,7 @@ const ShopContainer = styled.div`
   text-align: center;
 
   @media (max-width: 750px) {
-    margin-top: -8rem;
+    margin-top: -6rem;
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;

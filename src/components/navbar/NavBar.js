@@ -128,6 +128,7 @@ const RightText = styled.text`
 
 const ShopLinkContainer = styled.div`
   display: flex;
+  justify-content: space-evenly;
 `;
 
 const ShopLinks = styled(Link)`
@@ -140,13 +141,13 @@ const ShopLinks = styled(Link)`
   @media (max-width: 1255px) {
     display: none;
   }
-
-  @media (min-width: 1322px) {
-    display: flex;
-    margin-left: 20px;
-    margin-right: 15px;
-  }
 `;
+
+// @media (min-width: 1322px) {
+//   display: flex;
+//   margin-left: 20px;
+//   margin-right: 15px;
+// }
 
 const ShopLinksExtended = styled(Link)`
   color: black;

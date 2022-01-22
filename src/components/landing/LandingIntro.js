@@ -6,8 +6,6 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   margin-top: 10px;
-  min-width: 280px;
-  height: 350px;
 `;
 
 const Wrapper = styled.div`
@@ -16,14 +14,17 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 750px) {
-    flex-flow: column;
+  @media only screen and (max-width: 940px) {
+    flex-direction: column;
   }
 `;
 
+// display: grid;
+// grid-template-rows: auto;
+
 const ImgContainer = styled.div`
   height: 100%;
-  flex: 3;
+  flex: 75%;
 `;
 
 const Image = styled.img`
@@ -35,21 +36,13 @@ const Image = styled.img`
 `;
 
 const ShopContainer = styled.div`
-  flex: 1;
-  padding: 50px;
+  flex: 25%;
+  padding: 0px 20px 0px 20px;
   display: flex;
-  flex-flow: column;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
-
-  @media (max-width: 750px) {
-    margin-top: -6rem;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-evenly;
-    align-items: center;
-  }
 `;
 
 const Intro = styled.p`
@@ -58,6 +51,10 @@ const Intro = styled.p`
   font-weight: 600;
   letter-spacing: 1px;
   font-family: "Gideon Roman", cursive;
+
+  @media (max-width: 940px) {
+    margin-top: -5%;
+  }
 `;
 
 const Button = styled.button`
@@ -68,9 +65,10 @@ const Button = styled.button`
   font-family: "Gideon Roman", cursive;
   border-color: transparent;
   cursor: pointer;
+  margin-top: -20px;
 
-  @media (max-width: 750px) {
-    margin-top: -20px;
+  @media (max-width: 940px) {
+    margin-top: -15px;
   }
 `;
 

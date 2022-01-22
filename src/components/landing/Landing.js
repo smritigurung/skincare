@@ -6,6 +6,7 @@ import "./Landing.css";
 import Announcement from "../Announcement";
 import NavBar from "../navbar/NavBar";
 import LandingIntro from "./LandingIntro";
+import Categories from "./Categories";
 
 export default function LandingPage() {
   return (
@@ -13,6 +14,7 @@ export default function LandingPage() {
       <Announcement />
       <NavBar />
       <LandingIntro />
+      <Categories />
     </div>
   );
 }

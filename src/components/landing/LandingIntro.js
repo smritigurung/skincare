@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import landingIntroPic from "../../images/landingIntroPic.jpeg";
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 70px);
   display: flex;
   margin-top: 10px;
 `;
@@ -13,14 +14,7 @@ const Wrapper = styled.div`
   width: 100vw;
   display: flex;
   align-items: center;
-
-  @media only screen and (max-width: 940px) {
-    flex-direction: column;
-  }
 `;
-
-// display: grid;
-// grid-template-rows: auto;
 
 const ImgContainer = styled.div`
   height: 100%;
@@ -28,11 +22,17 @@ const ImgContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 90%;
+  height: 80%;
   width: 90%;
   object-fit: cover;
   object-position: center;
   margin-left: 5%;
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    width: 85%;
+    height: 70%;
+    margin-top: 30px;
+  }
 `;
 
 const ShopContainer = styled.div`
@@ -43,17 +43,25 @@ const ShopContainer = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    flex: 40%;
+  }
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const Intro = styled.p`
-  margin: 40px 0px;
-  font-size: 24px;
+  margin-top: -30px;
+  font-size: 22px;
   font-weight: 600;
   letter-spacing: 1px;
   font-family: "Gideon Roman", cursive;
 
-  @media (max-width: 940px) {
-    margin-top: -5%;
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    font-size: 20px;
   }
 `;
 
@@ -65,10 +73,10 @@ const Button = styled.button`
   font-family: "Gideon Roman", cursive;
   border-color: transparent;
   cursor: pointer;
-  margin-top: -20px;
 
-  @media (max-width: 940px) {
-    margin-top: -15px;
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    font-size: 18px;
+    padding: 5px;
   }
 `;
 
@@ -77,7 +85,7 @@ function LandingIntro() {
     <Container>
       <Wrapper>
         <ImgContainer>
-          <Image src="https://images.unsplash.com/photo-1577058109956-67adf6edc586?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"></Image>
+          <Image src={landingIntroPic}></Image>
         </ImgContainer>
         <ShopContainer>
           <Intro>A best place to find your favorite skincare products</Intro>

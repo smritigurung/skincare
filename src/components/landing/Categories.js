@@ -22,9 +22,10 @@ const Container = styled.div`
 function Categories() {
   return (
     <Container>
-      {categories.map((item) => (
+      {/* {categories.map((item) => (
         <CategoryItem item={item} />
-      ))}
+      ))} */}
+      Category
     </Container>
   );
 }

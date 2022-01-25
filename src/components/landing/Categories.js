@@ -10,7 +10,6 @@ const Section = styled.section`
     margin-top: 1rem;
 
     padding: 0 4vw;
-    background-color: aliceblue;
 
     .category {
       display: flex;

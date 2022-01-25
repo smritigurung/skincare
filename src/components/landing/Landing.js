@@ -8,6 +8,7 @@ import NavBar from "../navbar/NavBar";
 import LandingIntro from "./LandingIntro";
 import Categories from "./Categories";
 import Newsletter from "../Newsletter";
+import Footer from "../Footer";
 
 export default function LandingPage() {
   return (
@@ -17,6 +18,7 @@ export default function LandingPage() {
       <LandingIntro />
       <Categories />
       <Newsletter />
+      <Footer />
     </div>
   );
 }

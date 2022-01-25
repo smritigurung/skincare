@@ -22,16 +22,16 @@ const ImgContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 80%;
-  width: 90%;
+  height: 70%;
+  width: 80%;
   object-fit: cover;
   object-position: center;
-  margin-left: 5%;
+  margin-left: 10%;
+  transform: scale(1.2);
 
   @media screen and (min-width: 481px) and (max-width: 768px) {
-    width: 85%;
-    height: 70%;
-    margin-top: 30px;
+    width: 75%;
+    height: 60%;
   }
 `;
 
@@ -40,12 +40,15 @@ const ShopContainer = styled.div`
   padding: 0px 20px 0px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
+  margin-bottom: 70px;
+  margin-right: 30px;
 
   @media screen and (min-width: 481px) and (max-width: 768px) {
     flex: 40%;
+    margin-bottom: 100px;
   }
 
   @media screen and (max-width: 480px) {
@@ -54,7 +57,6 @@ const ShopContainer = styled.div`
 `;
 
 const Intro = styled.p`
-  margin-top: -30px;
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -72,6 +74,7 @@ const Button = styled.button`
   color: white;
   font-family: "Gideon Roman", cursive;
   border-color: transparent;
+  /* transition: 0.5s ease-in-out; */
   cursor: pointer;
 
   @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -85,7 +88,7 @@ function LandingIntro() {
     <Container>
       <Wrapper>
         <ImgContainer>
-          <Image src={landingIntroPic}></Image>
+          <Image src={landingIntroPic} alt=""></Image>
         </ImgContainer>
         <ShopContainer>
           <Intro>A best place to find your favorite skincare products</Intro>

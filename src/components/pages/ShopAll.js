@@ -10,6 +10,12 @@ const Container = styled.div``;
 
 const Title = styled.h1`
   margin: 20px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 300;
+  font-family: "Source Serif 4", sans-serif;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
 `;
 
 const FilterContainer = styled.div`
@@ -45,7 +51,7 @@ function ShopAll() {
     <Container>
       <Announcement />
       <NavBar />
-      <Title>Korean Skincare</Title>
+      <Title>Korean Skin Care</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>

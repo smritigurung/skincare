@@ -118,7 +118,7 @@ const Icon = styled.div`
   }
 `;
 
-function ProductLists() {
+function BestSellersLists() {
   return (
     <Section>
       <div className="shopProducts">
@@ -127,7 +127,7 @@ function ProductLists() {
             <div className="product">
               <div className="imageNicon">
                 <div className="image">
-                  <img src={product.img} alt="ShopAllProducts" />
+                  <img src={product.img} alt="BestSellers" />
                 </div>
                 <Info>
                   <Icon>
@@ -150,4 +150,4 @@ function ProductLists() {
   );
 }
 
-export default ProductLists;
+export default BestSellersLists;

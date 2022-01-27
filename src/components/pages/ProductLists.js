@@ -8,8 +8,16 @@ const Section = styled.section`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
+    margin: 3rem;
     justify-content: space-evenly;
+
+    @media screen and (min-width: 653px) and (max-width: 963px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 250px) and (max-width: 652px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     .product {
       display: flex;
@@ -22,9 +30,9 @@ const Section = styled.section`
 
       .imageNicon {
         display: flex;
-
         justify-content: center;
         align-items: center;
+
         background-color: #f5fbfd;
         overflow: hidden;
         position: relative;
@@ -36,6 +44,16 @@ const Section = styled.section`
             height: 18rem;
             width: 18rem;
             object-fit: cover;
+
+            @media screen and (min-width: 402px) and (max-width: 652px) {
+              height: 20rem;
+              width: 20rem;
+            }
+
+            @media screen and (min-width: 250px) and (max-width: 401px) {
+              height: 16rem;
+              width: 16rem;
+            }
           }
         }
       }
@@ -43,7 +61,16 @@ const Section = styled.section`
       p {
         text-align: center;
         letter-spacing: 1.5px;
-        line-height: 1rem;
+        line-height: 1.2rem;
+      }
+      h3 {
+        margin-top: 5px;
+      }
+      span {
+        text-align: center;
+        letter-spacing: 1.5px;
+        line-height: 1.2rem;
+        margin-top: auto;
       }
     }
   }
@@ -107,7 +134,7 @@ function ProductLists() {
 
               <p>{product.desc}</p>
 
-              <p>{product.price}</p>
+              <span>{product.price}</span>
               <Button>Add to Cart</Button>
             </div>
           );

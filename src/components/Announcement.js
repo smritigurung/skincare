@@ -12,9 +12,12 @@ const Container = styled.div`
   font-weight: 600;
   font-family: "Bellota", cursive;
   letter-spacing: 1px;
+  text-align: center;
+
+  @media screen and (min-width: 250px) and (max-width: 360px) {
+    font-size: 12px;
+  }
 `;
-//  font-family: "Gideon Roman", cursive;
-// font-family: "Bellota", cursive;
 
 function Announcement() {
   return <Container>Super Deal! Free Shipping on Orders Over $50</Container>;

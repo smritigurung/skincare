@@ -16,15 +16,35 @@ const Title = styled.h1`
   font-family: "Source Serif 4", sans-serif;
   letter-spacing: 1.2px;
   line-height: 1.2;
+
+  @media screen and (min-width: 250px) and (max-width: 473px) {
+    font-size: 35px;
+  }
 `;
 
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media screen and (min-width: 401px) and (max-width: 810px) {
+    justify-content: space-evenly;
+  }
+
+  @media screen and (min-width: 250px) and (max-width: 400px) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 `;
 
 const Filter = styled.div`
   margin: 20px;
+
+  @media screen and (min-width: 250px) and (max-width: 810px) {
+    width: 0px 20px;
+    display: flex;
+
+    flex-direction: column;
+  }
 `;
 
 const FilterText = styled.span`
@@ -33,6 +53,10 @@ const FilterText = styled.span`
   font-family: "Gideon";
   letter-spacing: 1px;
   margin-right: 10px;
+
+  @media screen and (min-width: 250px) and (max-width: 810px) {
+    margin-right: 0px;
+  }
 `;
 
 const Select = styled.select`
@@ -42,6 +66,10 @@ const Select = styled.select`
   letter-spacing: 0.5px;
   padding: 8px;
   margin-right: 20px;
+
+  @media screen and (min-width: 250px) and (max-width: 810px) {
+    margin: 10px 0px;
+  }
 `;
 
 const Option = styled.option``;

@@ -32,7 +32,7 @@ const Section = styled.section`
       display: flex;
       flex-direction: column;
       margin: 0 auto;
-      padding: 0 2em;
+      padding: 0 3em;
       max-width: 1100px;
 
       .letters {

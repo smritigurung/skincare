@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { brandnames } from "../../data";
+import { Link } from "react-scroll";
 
 const Section = styled.section`
   .brands {
-    .alphabets {
+    .index {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      gap: 1.9rem;
+      gap: 1.6rem;
       margin: 0 auto;
       padding: 0 1em 2em;
       border-bottom: 1px solid #dddddd;
@@ -19,37 +20,62 @@ const Section = styled.section`
         list-style: none;
         font-family: "Source Serif 4", sans-serif;
         font-weight: 600;
+
+        &:hover {
+          text-decoration: underline;
+          color: #db7093;
+          cursor: pointer;
+        }
       }
     }
     .brand-names {
       display: flex;
       flex-direction: column;
       margin: 0 auto;
-      padding: 0 1em;
+      padding: 0 2em;
       max-width: 1100px;
 
       .letters {
         display: flex;
         padding: 2em 0;
         border-bottom: 1px solid #dddddd;
-        /* flex-direction: row; */
+
+        @media only screen and (max-width: 947px) {
+          flex-direction: column;
+        }
 
         .brand-index-title {
           display: flex;
+          justify-content: center;
           flex-basis: 10%;
           margin-right: 1em;
+
+          @media only screen and (max-width: 947px) {
+            justify-content: flex-start;
+          }
+
           h3 {
-            margin-left: 2em;
+            margin-top: 0;
             font-family: "Gideon Roman", cursive;
+            font-weight: 600;
           }
         }
 
         ul {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          padding: 0;
+
           li {
-            margin-left: 20px;
+            flex-basis: 15%;
             list-style: none;
             font-family: "Gideon Roman", cursive;
             font-size: 18px;
+            width: 270px;
+            min-height: 30px;
+            max-height: 40px;
+            cursor: pointer;
           }
         }
       }
@@ -72,42 +98,41 @@ const Title = styled.h1`
 `;
 
 function BrandsLists() {
+  /*
+  "Scroll to item from outside the list component" by Robin Wieruch
+  https://www.robinwieruch.de/react-scroll-to-item/
+  */
+  const refs = brandnames.reduce((acc, value) => {
+    acc[value.id] = React.createRef();
+    return acc;
+  }, {});
+
+  const handleClick = (id) =>
+    refs[id].current.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+
   return (
     <Section>
       <Title>BRANDS DIRECTORY</Title>
       <div className="brands">
-        <ul className="alphabets">
-          <li className="letter">A</li>
-          <li className="letter">B</li>
-          <li className="letter">C</li>
-          <li className="letter">D</li>
-          <li className="letter">E</li>
-          <li className="letter">F</li>
-          <li className="letter">G</li>
-          <li className="letter">H</li>
-          <li className="letter">I</li>
-          <li className="letter">J</li>
-          <li className="letter">K</li>
-          <li className="letter">L</li>
-          <li className="letter">M</li>
-          <li className="letter">N</li>
-          <li className="letter">O</li>
-          <li className="letter">P</li>
-          <li className="letter">Q</li>
-          <li className="letter">R</li>
-          <li className="letter">S</li>
-          <li className="letter">T</li>
-          <li className="letter">U</li>
-          <li className="letter">V</li>
-          <li className="letter">W</li>
-          <li className="letter">X</li>
-          <li className="letter">Y</li>
-          <li className="letter">Z</li>
+        <ul className="index">
+          {brandnames.map((brand) => (
+            <li
+              className="letter"
+              key={brand.id}
+              onClick={() => handleClick(brand.id)}
+            >
+              {brand.letter}
+            </li>
+          ))}
         </ul>
+
         <div className="brand-names">
-          {brandnames.map((brand, key) => {
+          {brandnames.map((brand) => {
             return (
-              <div className="letters" key={key}>
+              <div className="letters" key={brand.id} ref={refs[brand.id]}>
                 <div className="brand-index-title">
                   <h3>{brand.letter}</h3>
                 </div>

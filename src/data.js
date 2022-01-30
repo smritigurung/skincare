@@ -471,4 +471,17 @@ export const brandnames = [
       },
     ],
   },
+
+  {
+    id: 27,
+    letter: "0-9",
+    names: [
+      {
+        name1: "1 Name",
+        name2: "2 Name",
+        name3: "3 Name",
+        name4: "4 Name",
+      },
+    ],
+  },
 ];

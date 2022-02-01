@@ -18,7 +18,7 @@ const Section = styled.section`
       align-items: center;
       gap: 1rem;
       margin-top: 3vw;
-      margin-bottom: 3vw;
+      margin-bottom: 5vw;
 
       .image {
         max-height: 20rem;

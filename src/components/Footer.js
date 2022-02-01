@@ -22,7 +22,7 @@ const Section = styled.footer`
     display: flex;
     list-style-type: none;
     gap: 4vw;
-    margin-top: 2vw;
+    margin-top: 0.5vw;
     padding: 0;
 
     li {
@@ -160,7 +160,7 @@ function Footer() {
       <Section>
         <div className="logo container">
           <Title>GLOW SKIN</Title>
-          <p>
+          <p style={{ marginBottom: "2.2rem" }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -168,6 +168,15 @@ function Footer() {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p
+            style={{
+              fontWeight: "600",
+              fontSize: "18px",
+              marginBottom: "2px",
+            }}
+          >
+            Connect with us
           </p>
           <ul>
             <li style={{ backgroundColor: "#E4405F" }}>

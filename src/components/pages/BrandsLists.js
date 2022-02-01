@@ -1,7 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import { brandnames } from "../../data";
-import { Link } from "react-scroll";
 
 const Section = styled.section`
   .brands {

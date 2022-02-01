@@ -5,6 +5,7 @@ import ShopAllPage from "./components/pages/ShopAll";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BestSellersPage from "./components/pages/BestSellers";
 import BrandsPage from "./components/pages/Brands";
+import AboutPage from "./components/pages/About";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/shop" element={<ShopAllPage />}></Route>
         <Route exact path="/bestsellers" element={<BestSellersPage />}></Route>
         <Route exact path="/brands" element={<BrandsPage />}></Route>
+        <Route exact path="/about" element={<AboutPage />}></Route>
       </Routes>
     </Router>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { categories } from "../../data";
+import { useNavigate } from "react-router-dom";
 
 const Section = styled.section`
   .categories {
@@ -126,6 +127,11 @@ const Button = styled.button`
 `;
 
 function Categories() {
+  const navigate = useNavigate();
+
+  const shopBtn = () => {
+    navigate("/shop");
+  };
   return (
     <Section>
       <div className="categories">
@@ -133,10 +139,10 @@ function Categories() {
           return (
             <div className="category">
               <div className="image">
-                <img src={category.img} alt="Category Image" />
+                <img src={category.img} alt="" />
               </div>
               <h3>{category.title}</h3>
-              <Button>SHOP NOW</Button>
+              <Button onClick={shopBtn}>SHOP NOW</Button>
             </div>
           );
         })}

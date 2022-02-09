@@ -2,7 +2,6 @@
 // npm install @mui/icons-material
 
 import React from "react";
-import "./Landing.css";
 import Announcement from "../Announcement";
 import NavBar from "../navbar/NavBar";
 import LandingIntro from "./LandingIntro";

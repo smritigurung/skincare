@@ -345,8 +345,8 @@ function NavBar() {
           </SearchContainer>
         </li>
         <li className="userMenuList">
-          <UserLink to="/account">
-            <PersonOutlineIcon style={{ fontSize: "1.3rem" }} />
+          <UserLink to="/account/login">
+            <PersonOutlineIcon style={{ fontSize: "1.4rem" }} />
           </UserLink>
         </li>
         <li className="userMenuList">

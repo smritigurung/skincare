@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import BestSellersPage from "./components/pages/BestSellers";
 import BrandsPage from "./components/pages/Brands";
 import AboutPage from "./components/pages/About";
+import LoginPage from "./components/pages/Login";
+import RegisterPage from "./components/pages/Register";
 
 function App() {
   return (
@@ -16,6 +18,12 @@ function App() {
         <Route exact path="/bestsellers" element={<BestSellersPage />}></Route>
         <Route exact path="/brands" element={<BrandsPage />}></Route>
         <Route exact path="/about" element={<AboutPage />}></Route>
+        <Route exact path="/account/login" element={<LoginPage />}></Route>
+        <Route
+          exact
+          path="/account/register"
+          element={<RegisterPage />}
+        ></Route>
       </Routes>
     </Router>
   );

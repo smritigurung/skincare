@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import landingIntroPic from "../../images/landingIntroPic.jpeg";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -84,6 +85,11 @@ const Button = styled.button`
 `;
 
 function LandingIntro() {
+  const navigate = useNavigate();
+
+  const shopBtn = () => {
+    navigate("/shop");
+  };
   return (
     <Container>
       <Wrapper>
@@ -92,7 +98,7 @@ function LandingIntro() {
         </ImgContainer>
         <ShopContainer>
           <Intro>A best place to find your favorite skincare products</Intro>
-          <Button>SHOP NOW</Button>
+          <Button onClick={shopBtn}>SHOP NOW</Button>
         </ShopContainer>
       </Wrapper>
     </Container>

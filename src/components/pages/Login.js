@@ -9,7 +9,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80")
+    url("https://images.unsplash.com/photo-1582616698198-f978da534162?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80")
       center;
   background-size: cover;
   display: flex;
@@ -20,7 +20,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 30%;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
 
   @media screen and (min-width: 250px) and (max-width: 768px) {

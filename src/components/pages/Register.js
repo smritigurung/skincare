@@ -9,12 +9,18 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80")
+    url("https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80")
       center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .link {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -73,6 +79,18 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
+const Link = styled.a`
+  margin: 5px 0px;
+  font-size: 12px;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    color: #db7093;
+  }
+`;
+
 function Register() {
   return (
     <div>
@@ -93,6 +111,10 @@ function Register() {
               data in accordance with the <b>PRIVACY POLICY</b>
             </Agreement>
             <Button>SUBMIT</Button>
+            <div className="link">
+              <Link>Forgot your password?</Link>
+              <Link href="/account/login">Sign in</Link>
+            </div>
           </Form>
         </Wrapper>
       </Container>

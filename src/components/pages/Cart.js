@@ -18,10 +18,25 @@ const Container = styled.div`
   .bottom {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (min-width: 250px) and (max-width: 400px) {
+      flex-direction: column;
+    }
+    @media screen and (min-width: 401px) and (max-width: 868px) {
+      flex-direction: column;
+    }
   }
   .product {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (min-width: 250px) and (max-width: 400px) {
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 401px) and (max-width: 868px) {
+      flex-direction: column;
+    }
 
     .details {
       padding: 20px;
@@ -30,10 +45,24 @@ const Container = styled.div`
       justify-content: space-around;
     }
   }
+
+  .summary-title {
+    font-weight: 500;
+    font-size: 28px;
+    font-family: "Source Serif 4", sans-serif;
+  }
 `;
 
 const Wrapper = styled.div`
   padding: 20px;
+
+  @media screen and (min-width: 250px) and (max-width: 400px) {
+    padding: 5px;
+  }
+
+  @media screen and (min-width: 401px) and (max-width: 800px) {
+    padding: 5px;
+  }
 `;
 
 const Title = styled.h1`
@@ -41,6 +70,7 @@ const Title = styled.h1`
   font-weight: 300;
   font-family: "Source Serif 4", sans-serif;
   text-align: center;
+  margin-top: 10px;
 `;
 
 const TopButton = styled.button`
@@ -54,9 +84,28 @@ const TopButton = styled.button`
   border-radius: 5px;
   font-family: "Source Serif 4", sans-serif;
   letter-spacing: 1.1px;
+
+  @media screen and (min-width: 250px) and (max-width: 400px) {
+    padding: 8px;
+    letter-spacing: 0px;
+    margin: 0px 10px;
+    font-size: 13px;
+  }
+  @media screen and (min-width: 401px) and (max-width: 800px) {
+    padding: 8px;
+    margin: 0px 10px;
+    font-size: 14px;
+  }
 `;
 
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+  @media screen and (min-width: 250px) and (max-width: 400px) {
+    display: none;
+  }
+  @media screen and (min-width: 401px) and (max-width: 800px) {
+    display: none;
+  }
+`;
 
 const TopText = styled.span`
   text-decoration: underline;
@@ -72,12 +121,23 @@ const Info = styled.div`
 const ProductDetail = styled.div`
   flex: 2;
   display: flex;
+  font-family: "Source Serif 4", sans-serif;
+  color: black;
 `;
 
 const Image = styled.img`
   width: 200px;
   height: 200px;
   object-fit: cover;
+
+  @media screen and (min-width: 250px) and (max-width: 400px) {
+    width: 150px;
+    height: 150px;
+  }
+  @media screen and (min-width: 401px) and (max-width: 800px) {
+    width: 180px;
+    height: 180px;
+  }
 `;
 
 const ProductName = styled.span``;
@@ -92,22 +152,39 @@ const PriceDetail = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Source Serif 4", sans-serif;
 `;
 
 const QuantityContainer = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  font-family: "Source Serif 4", sans-serif;
 `;
 
 const Quantity = styled.div`
   font-size: 22px;
   margin: 5px;
+
+  @media screen and (min-width: 250px) and (max-width: 400px) {
+    margin: 5px 15px;
+  }
+
+  @media screen and (min-width: 401px) and (max-width: 800px) {
+    margin: 5px 15px;
+  }
 `;
 
 const ProductPrice = styled.div`
   font-size: 26px;
   font-weight: 200;
+
+  @media screen and (min-width: 250px) and (max-width: 400px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 401px) and (max-width: 800px) {
+    margin-bottom: 22px;
+  }
 `;
 
 const Hr = styled.hr`
@@ -118,6 +195,44 @@ const Hr = styled.hr`
 
 const Summary = styled.div`
   flex: 1;
+  border: 0.5px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+
+  @media screen and (min-width: 401px) and (max-width: 868px) {
+    margin: 30px 10px;
+  }
+  @media screen and (min-width: 1025px) and (max-width: 1300px) {
+    height: 50vh;
+  }
+  @media screen and (min-width: 1301px) {
+    height: 55vh;
+  }
+`;
+
+const SummaryItem = styled.div`
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: ${(props) => props.type === "total" && "500"};
+  font-size: ${(props) => props.type === "total" && "24px"};
+  font-family: "Source Serif 4", sans-serif;
+  font-weight: 600;
+`;
+
+const SummaryItemText = styled.span``;
+
+const SummaryItemPrice = styled.span``;
+
+const Button = styled.button`
+  width: 100%;
+  padding: 10px;
+  border: 1.8px solid #d51280;
+  color: #d51280;
+  background-color: white;
+  font-weight: 600;
+  font-family: "Source Serif 4", sans-serif;
+  letter-spacing: 1.1px;
 `;
 
 function Cart() {
@@ -142,13 +257,13 @@ function Cart() {
                 <Image src={shop1} />
                 <div className="details">
                   <ProductName>
-                    <b>Product:</b> PEARLESSENCE Hydrating Face Mist
+                    <b>Product: </b>PEARLESSENCE Hydrating Face Mist
                   </ProductName>
                   <ProductId>
-                    <b>ID:</b> 123456
+                    <b>ID: </b>123456
                   </ProductId>
                   <ProductSize>
-                    <b>Size:</b>1.7oz/ 50 mL
+                    <b>Size: </b>1.7oz/ 50 mL
                   </ProductSize>
                 </div>
               </ProductDetail>
@@ -167,13 +282,13 @@ function Cart() {
                 <Image src={shop2} />
                 <div className="details">
                   <ProductName>
-                    <b>Product:</b> COCOOIL Body Oil Organic Coconut Oil
+                    <b>Product: </b>COCOOIL Body Oil Organic Coconut Oil
                   </ProductName>
                   <ProductId>
-                    <b>ID:</b> 112233
+                    <b>ID: </b>112233
                   </ProductId>
                   <ProductSize>
-                    <b>Size:</b>1.7oz/ 50 mL
+                    <b>Size: </b>1.7oz/ 50 mL
                   </ProductSize>
                 </div>
               </ProductDetail>
@@ -187,7 +302,26 @@ function Cart() {
               </PriceDetail>
             </div>
           </Info>
-          <Summary>summary</Summary>
+          <Summary>
+            <h1 className="summary-title">ORDER SUMMARY</h1>
+            <SummaryItem>
+              <SummaryItemText>Subtotal</SummaryItemText>
+              <SummaryItemPrice>$57.00</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Estimated Shipping</SummaryItemText>
+              <SummaryItemPrice>$5.70</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Shipping Discount</SummaryItemText>
+              <SummaryItemPrice>$ -5.70</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem type="total">
+              <SummaryItemText>Total</SummaryItemText>
+              <SummaryItemPrice>$57.00</SummaryItemPrice>
+            </SummaryItem>
+            <Button>CHECKOUT NOW</Button>
+          </Summary>
         </div>
       </Wrapper>
       <Footer />

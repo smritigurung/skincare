@@ -9,6 +9,7 @@ import AboutPage from "./components/pages/About";
 import LoginPage from "./components/pages/Login";
 import RegisterPage from "./components/pages/Register";
 import ProductPage from "./components/pages/Product";
+import ShoppingCartPage from "./components/pages/Cart";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           path="/shop/collections/product"
           element={<ProductPage />}
         ></Route>
+        <Route exact path="/cart" element={<ShoppingCartPage />}></Route>
       </Routes>
     </Router>
   );

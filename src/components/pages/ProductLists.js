@@ -59,16 +59,34 @@ const Section = styled.section`
       }
 
       p {
-        text-align: center;
-        letter-spacing: 1.5px;
-        line-height: 1.2rem;
-        font-family: "Gideon Roman", cursive;
+        a {
+          text-align: center;
+          letter-spacing: 1.5px;
+          line-height: 1.2rem;
+          font-family: "Gideon Roman", cursive;
+          text-decoration: none;
+          color: black;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
 
       h3 {
-        margin-top: 5px;
-        font-family: "Bellota", cursive;
-        font-weight: 600;
+        a {
+          margin-top: 5px;
+          font-family: "Bellota", cursive;
+          font-weight: 600;
+          text-decoration: none;
+          color: black;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
       span {
         text-align: center;
@@ -136,9 +154,13 @@ function ProductLists() {
                 </Info>
               </div>
 
-              <h3>{product.title}</h3>
+              <h3>
+                <a href="/shop/collections/product">{product.title}</a>
+              </h3>
 
-              <p>{product.desc}</p>
+              <p>
+                <a href="/shop/collections/product">{product.desc}</a>
+              </p>
 
               <span>{product.price}</span>
               <Button>Add to Cart</Button>

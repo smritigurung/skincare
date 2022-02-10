@@ -8,6 +8,7 @@ import BrandsPage from "./components/pages/Brands";
 import AboutPage from "./components/pages/About";
 import LoginPage from "./components/pages/Login";
 import RegisterPage from "./components/pages/Register";
+import ProductPage from "./components/pages/Product";
 
 function App() {
   return (
@@ -23,6 +24,11 @@ function App() {
           exact
           path="/account/register"
           element={<RegisterPage />}
+        ></Route>
+        <Route
+          exact
+          path="/shop/collections/product"
+          element={<ProductPage />}
         ></Route>
       </Routes>
     </Router>

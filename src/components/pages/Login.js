@@ -18,7 +18,8 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 30%;
+  width: 35%;
+
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
@@ -62,10 +63,12 @@ const Button = styled.button`
 `;
 
 const Link = styled.a`
-  margin: 5px 0px;
+  margin: 5px auto 0;
   font-size: 12px;
   color: black;
   text-align: center;
+  display: block;
+  max-width: 140px;
   cursor: pointer;
 
   &:hover {
@@ -83,11 +86,13 @@ function Login() {
           <Title>SIGN IN</Title>
           <Form>
             <Input placeholder="Username" />
-            <Input placeholder="Password" />
+            <Input placeholder="Password" type="password" />
+
             <Button>LOGIN</Button>
-            <Link>Forgot your password?</Link>
-            <Link href="/account/register">Create a new account</Link>
           </Form>
+
+          <Link>Forgot your password?</Link>
+          <Link href="/account/register">Create a new account</Link>
         </Wrapper>
       </Container>
     </div>

@@ -15,12 +15,6 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  .link {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
 `;
 
 const Wrapper = styled.div`
@@ -80,10 +74,12 @@ const Button = styled.button`
 `;
 
 const Link = styled.a`
-  margin: 5px 0px;
+  margin: 5px auto 0;
   font-size: 12px;
   color: black;
   text-align: center;
+  display: block;
+  max-width: 140px;
   cursor: pointer;
 
   &:hover {
@@ -111,11 +107,9 @@ function Register() {
               data in accordance with the <b>PRIVACY POLICY</b>
             </Agreement>
             <Button>SUBMIT</Button>
-            <div className="link">
-              <Link>Forgot your password?</Link>
-              <Link href="/account/login">Sign in</Link>
-            </div>
           </Form>
+          <Link>Forgot your password?</Link>
+          <Link href="/account/login">Sign in</Link>
         </Wrapper>
       </Container>
     </div>

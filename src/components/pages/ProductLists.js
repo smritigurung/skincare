@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { shopAllProducts } from "../../data";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import { Link } from "react-router-dom";
 
 const Section = styled.section`
   .shopProducts {
@@ -58,36 +59,6 @@ const Section = styled.section`
         }
       }
 
-      p {
-        a {
-          text-align: center;
-          letter-spacing: 1.5px;
-          line-height: 1.2rem;
-          font-family: "Gideon Roman", cursive;
-          text-decoration: none;
-          color: black;
-          cursor: pointer;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-
-      h3 {
-        a {
-          margin-top: 5px;
-          font-family: "Bellota", cursive;
-          font-weight: 600;
-          text-decoration: none;
-          color: black;
-          cursor: pointer;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
       span {
         text-align: center;
         letter-spacing: 1.5px;
@@ -136,6 +107,35 @@ const Icon = styled.div`
   }
 `;
 
+const TitleLink = styled(Link)`
+  margin-top: 5px;
+  font-family: "Bellota", cursive;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    color: black;
+  }
+`;
+
+const DescLink = styled(Link)`
+  text-align: center;
+  letter-spacing: 1.5px;
+  line-height: 1.2rem;
+  font-family: "Gideon Roman", cursive;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    color: black;
+  }
+`;
+
 function ProductLists() {
   return (
     <Section>
@@ -155,11 +155,15 @@ function ProductLists() {
               </div>
 
               <h3>
-                <a href="/shop/collections/product">{product.title}</a>
+                <TitleLink to="/shop/collections/product">
+                  {product.title}
+                </TitleLink>
               </h3>
 
               <p>
-                <a href="/shop/collections/product">{product.desc}</a>
+                <DescLink to="/shop/collections/product">
+                  {product.desc}
+                </DescLink>
               </p>
 
               <span>{product.price}</span>

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/skincare/static/css/main.56e6221f.css",
-    "main.js": "/skincare/static/js/main.c3b70acb.js",
+    "main.js": "/skincare/static/js/main.c8d30ee3.js",
     "static/js/787.62e20814.chunk.js": "/skincare/static/js/787.62e20814.chunk.js",
     "static/media/shop8.jpeg": "/skincare/static/media/shop8.683d8a45029021b22381.jpeg",
     "static/media/landingIntroPic.jpeg": "/skincare/static/media/landingIntroPic.121b9ce6c27ae8f7b1ea.jpeg",
@@ -19,11 +19,11 @@
     "static/media/tools.jpeg": "/skincare/static/media/tools.ab3ad667c9e721149f8c.jpeg",
     "index.html": "/skincare/index.html",
     "main.56e6221f.css.map": "/skincare/static/css/main.56e6221f.css.map",
-    "main.c3b70acb.js.map": "/skincare/static/js/main.c3b70acb.js.map",
+    "main.c8d30ee3.js.map": "/skincare/static/js/main.c8d30ee3.js.map",
     "787.62e20814.chunk.js.map": "/skincare/static/js/787.62e20814.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.56e6221f.css",
-    "static/js/main.c3b70acb.js"
+    "static/js/main.c8d30ee3.js"
   ]
 }

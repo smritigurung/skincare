@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/skincare/static/css/main.56e6221f.css",
+    "main.js": "/skincare/static/js/main.c3b70acb.js",
+    "static/js/787.62e20814.chunk.js": "/skincare/static/js/787.62e20814.chunk.js",
+    "static/media/shop8.jpeg": "/skincare/static/media/shop8.683d8a45029021b22381.jpeg",
+    "static/media/landingIntroPic.jpeg": "/skincare/static/media/landingIntroPic.121b9ce6c27ae8f7b1ea.jpeg",
+    "static/media/about2.jpeg": "/skincare/static/media/about2.837730670ae21e498d17.jpeg",
+    "static/media/shop3.jpeg": "/skincare/static/media/shop3.5180eaa17e1b752e0c33.jpeg",
+    "static/media/shop5.jpeg": "/skincare/static/media/shop5.abd96c8deeb84b9fded5.jpeg",
+    "static/media/shop4.jpeg": "/skincare/static/media/shop4.f600de2e9ef24a44d21e.jpeg",
+    "static/media/about1.jpeg": "/skincare/static/media/about1.af71ef145ca11caba0b2.jpeg",
+    "static/media/shop7.jpeg": "/skincare/static/media/shop7.08f61a6081670da9eeb5.jpeg",
+    "static/media/shop2.jpeg": "/skincare/static/media/shop2.50eb927da7a6e815b90d.jpeg",
+    "static/media/serum.jpeg": "/skincare/static/media/serum.0a27240852b231b21521.jpeg",
+    "static/media/shop1.jpeg": "/skincare/static/media/shop1.e445ddd92edb0a4b6292.jpeg",
+    "static/media/shop6.jpeg": "/skincare/static/media/shop6.7e73d63b6d9a914dde74.jpeg",
+    "static/media/lipBalm.jpeg": "/skincare/static/media/lipBalm.49ba6f82c2302c1a8a37.jpeg",
+    "static/media/tools.jpeg": "/skincare/static/media/tools.ab3ad667c9e721149f8c.jpeg",
+    "index.html": "/skincare/index.html",
+    "main.56e6221f.css.map": "/skincare/static/css/main.56e6221f.css.map",
+    "main.c3b70acb.js.map": "/skincare/static/js/main.c3b70acb.js.map",
+    "787.62e20814.chunk.js.map": "/skincare/static/js/787.62e20814.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56e6221f.css",
+    "static/js/main.c3b70acb.js"
+  ]
+}

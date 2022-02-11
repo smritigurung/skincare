@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Announcement from "../Announcement";
 import NavBar from "../navbar/NavBar";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -62,7 +63,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Link = styled.a`
+const RegisterLink = styled(Link)`
   margin: 5px auto 0;
   font-size: 12px;
   color: black;
@@ -91,8 +92,10 @@ function Login() {
             <Button>LOGIN</Button>
           </Form>
 
-          <Link>Forgot your password?</Link>
-          <Link href="/account/register">Create a new account</Link>
+          <RegisterLink to="/">Forgot your password?</RegisterLink>
+          <RegisterLink to="/account/register">
+            Create a new account
+          </RegisterLink>
         </Wrapper>
       </Container>
     </div>

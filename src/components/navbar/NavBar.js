@@ -340,6 +340,7 @@ function NavBar() {
                 fontSize: "18px",
                 marginRight: "-12px",
                 marginTop: "2px",
+                cursor: "pointer",
               }}
             />
           </SearchContainer>
@@ -350,7 +351,7 @@ function NavBar() {
           </UserLink>
         </li>
         <li className="userMenuList">
-          <Badge badgeContent={1} color="primary">
+          <Badge badgeContent={3} color="primary">
             <UserLink to="/cart">
               {" "}
               <ShoppingCartOutlinedIcon style={{ fontSize: "1.3rem" }} />

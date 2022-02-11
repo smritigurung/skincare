@@ -12,7 +12,7 @@ import ShoppingCartPage from "./components/pages/Cart";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL + "/"}>
       <Routes>
         <Route exact path="/" element={<LandingPage />}></Route>
         <Route exact path="/shop" element={<ShopAllPage />}></Route>

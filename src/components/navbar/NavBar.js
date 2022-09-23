@@ -351,7 +351,7 @@ function NavBar() {
           </UserLink>
         </li>
         <li className="userMenuList">
-          <Badge badgeContent={3} color="primary">
+          <Badge badgeContent={0} color="primary">
             <UserLink to="/cart">
               {" "}
               <ShoppingCartOutlinedIcon style={{ fontSize: "1.3rem" }} />

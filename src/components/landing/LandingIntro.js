@@ -94,7 +94,7 @@ function LandingIntro() {
     <Container>
       <Wrapper>
         <ImgContainer>
-          <Image src={landingIntroPic} alt=""></Image>
+          <Image src={landingIntroPic} alt="LandingIntroPic"></Image>
         </ImgContainer>
         <ShopContainer>
           <Intro>A best place to find your favorite skincare products</Intro>

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { shopAllProducts } from "../../data";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import { Link } from "react-router-dom";
 
 const Section = styled.section`
   .shopProducts {

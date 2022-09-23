@@ -137,7 +137,7 @@ function Categories() {
       <div className="categories">
         {categories.map((category) => {
           return (
-            <div className="category">
+            <div className="category" key={category.id}>
               <div className="image">
                 <img src={category.img} alt="" />
               </div>

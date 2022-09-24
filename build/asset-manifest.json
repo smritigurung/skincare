@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/skincare/static/css/main.56e6221f.css",
-    "main.js": "/skincare/static/js/main.b12f8ea3.js",
-    "static/js/787.62e20814.chunk.js": "/skincare/static/js/787.62e20814.chunk.js",
+    "main.css": "/skincare/static/css/main.4ea24607.css",
+    "main.js": "/skincare/static/js/main.ab36be87.js",
+    "static/js/787.433ce332.chunk.js": "/skincare/static/js/787.433ce332.chunk.js",
     "static/media/shop8.jpeg": "/skincare/static/media/shop8.683d8a45029021b22381.jpeg",
     "static/media/landingIntroPic.jpeg": "/skincare/static/media/landingIntroPic.121b9ce6c27ae8f7b1ea.jpeg",
     "static/media/about2.jpeg": "/skincare/static/media/about2.837730670ae21e498d17.jpeg",
@@ -18,9 +18,12 @@
     "static/media/lipBalm.jpeg": "/skincare/static/media/lipBalm.49ba6f82c2302c1a8a37.jpeg",
     "static/media/tools.jpeg": "/skincare/static/media/tools.ab3ad667c9e721149f8c.jpeg",
     "index.html": "/skincare/index.html",
-    "main.56e6221f.css.map": "/skincare/static/css/main.56e6221f.css.map",
-    "main.b12f8ea3.js.map": "/skincare/static/js/main.b12f8ea3.js.map",
-    "787.62e20814.chunk.js.map": "/skincare/static/js/787.62e20814.chunk.js.map"
+    "main.4ea24607.css.map": "/skincare/static/css/main.4ea24607.css.map",
+    "main.ab36be87.js.map": "/skincare/static/js/main.ab36be87.js.map",
+    "787.433ce332.chunk.js.map": "/skincare/static/js/787.433ce332.chunk.js.map"
   },
-  "entrypoints": ["static/css/main.56e6221f.css", "static/js/main.b12f8ea3.js"]
+  "entrypoints": [
+    "static/css/main.4ea24607.css",
+    "static/js/main.ab36be87.js"
+  ]
 }

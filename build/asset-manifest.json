@@ -22,8 +22,5 @@
     "main.b12f8ea3.js.map": "/skincare/static/js/main.b12f8ea3.js.map",
     "787.62e20814.chunk.js.map": "/skincare/static/js/787.62e20814.chunk.js.map"
   },
-  "entrypoints": [
-    "static/css/main.56e6221f.css",
-    "static/js/main.b12f8ea3.js"
-  ]
+  "entrypoints": ["static/css/main.56e6221f.css", "static/js/main.b12f8ea3.js"]
 }

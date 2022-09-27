@@ -5,8 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import BestSellersPage from "./components/pages/BestSellers";
 import BrandsPage from "./components/pages/Brands";
 import AboutPage from "./components/pages/About";
-import LoginPage from "./components/pages/Login";
-import RegisterPage from "./components/pages/Register";
+import LoginPage from "./components/auth/Login";
+import RegisterPage from "./components/auth/Register";
 import ProductPage from "./components/pages/Product";
 import ShoppingCartPage from "./components/pages/Cart";
 

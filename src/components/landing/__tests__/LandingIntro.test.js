@@ -3,7 +3,8 @@ import userEvent from "@testing-library/user-event";
 import LandingIntro from "../LandingIntro";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-describe("Landing Intro Tests", () => {
+// when you are using useNavigate() for this component, you have to wrap the component inside <Router> component. Otherwise, an error will occur.
+describe("Landing Intro in Landing Page Tests", () => {
   it("renders shopButton and description in landing intro", () => {
     render(
       <Router>

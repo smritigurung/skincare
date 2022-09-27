@@ -3,7 +3,8 @@ import userEvent from "@testing-library/user-event";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Categories from "../Categories";
 
-describe("Categories Tests", () => {
+// when you are using useNavigate() for this component, you have to wrap the component inside <Router> component. Otherwise, an error will occur.
+describe("Categories in Landing Page Tests", () => {
   it("renders descriptions in Categories", () => {
     render(
       <Router>
